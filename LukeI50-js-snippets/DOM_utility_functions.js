@@ -14,8 +14,9 @@ class UtilityFunctions{
     
 
     /**
-     * Creates cookies from an object where keys are cookie names and values are cookie values.
-     * @param {Object} name_and_value - An object containing cookie names and values.
+     * Creates a cookie from an object where keys are cookie names and values are cookie values.
+     * @param {string} Obj_name - The name of the cookie object.
+     * @param {Object} key_and_value - An object containing cookie names and values.
      */
     cookieCreateFromObj(Obj_name, key_and_value) {
         let cookieString = "";
