@@ -1,3 +1,6 @@
+/**
+ * LukeI50's collection of utility functions for working with the DOM.
+ */
 class UtilityFunctions{
     
     /**
