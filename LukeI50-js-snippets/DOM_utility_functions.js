@@ -17,14 +17,14 @@ class UtilityFunctions{
      * Creates cookies from an object where keys are cookie names and values are cookie values.
      * @param {Object} name_and_value - An object containing cookie names and values.
      */
-    cookieCreateFromObj(name_and_value) {
+    cookieCreateFromObj(Obj_name, key_and_value) {
         let cookieString = "";
 
-        Object.entries(name_and_value).forEach(([key, value]) => {
-            cookieString += `${key}=${value}; `;
+        Object.entries(key_and_value).forEach(([key, value]) => {
+            cookieString += `${key}:${value}| `;
         });
         
-        document.cookie = `${cookieString}` + "path=/; Secure; SameSite=None;"
+        document.cookie = `${Obj_name}=${cookieString}` + "; path=/; Secure; SameSite=None;"
         
     };
 
@@ -38,7 +38,7 @@ class UtilityFunctions{
         .find((row) => row.startsWith(`${cookie_name}=`))
         ?.split("=")[1];
         return value;
-    }
+    };
 
 
     /**
