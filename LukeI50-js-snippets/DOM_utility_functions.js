@@ -28,6 +28,11 @@ class UtilityFunctions{
         
     };
 
+    /**
+     * Retrieves the value of a specified cookie.
+     * @param {string} cookie_name - The name of the cookie to retrieve.
+     * @returns {string|null} The value of the cookie, or null if not found.
+     */
     cookieGetValue(cookie_name) {
         value = document.cookie.split("; ")
         .find((row) => row.startsWith(`${cookie_name}=`))
