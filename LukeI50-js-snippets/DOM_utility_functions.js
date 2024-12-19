@@ -28,6 +28,13 @@ class UtilityFunctions{
         
     };
 
+    cookieGetValue(cookie_name) {
+        value = document.cookie.split("; ")
+        .find((row) => row.startsWith(`${cookie_name}=`))
+        ?.split("=")[1];
+        return value;
+    }
+
 
     /**
      * Creates a new HTML element with the specified properties.
